@@ -1,0 +1,6 @@
+
+vi /home/test-user/testfile
+# this is a comment
+#if the file exists, vi will open it in command mode, 
+->if not, it will create it and open it in command mode.
+
