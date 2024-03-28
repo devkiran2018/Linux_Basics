@@ -1,0 +1,21 @@
+
+#Print the file name of the terminal connected to standard input.
+$ tty
+/dev/pts/0
+#To know the host name of the system
+hostname
+#This command can get or set the host name or the NIS domain name.
+#Query or change system hostname. #hostnamectl --help
+hostnamectl 
+#gives Static hostname, Operating system, Kernel, Architecture.
+$ ss -ntl
+#State          Recv-Q          Send-Q                     Local Address:Port                      Peer Address:Port          
+#LISTEN         0               4096                          127.0.0.11:8088                          0.0.0.0:*  
+
+$ netstat -ntl
+Active Internet connections (only servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State      
+tcp        0      0 127.0.0.11:8088        0.0.0.0:*               LISTEN 
+
+echo '10.0.10.1' |  tee -a /home/test_user/test1.txt
+#output is sent to the console as well as to the file.
