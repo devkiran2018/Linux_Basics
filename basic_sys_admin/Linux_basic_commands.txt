@@ -18,12 +18,11 @@
    17  find /home/test_user/ -name test
    18  find /home/test_user/ -name 'test*'
    19  find /home/test_user/ -name 'test1'
-   20  cat test1
-   21  tac test1
+   20  cat test1   # display from top to bottom.
+   21  tac test1  # reverse dsiplay from bottom to top.
    22  tail -n10 test1
    23  head -n10 test1
    24  echo 'this is a test line1' 
-   25  ls
    26  echo 'this is a test line1' >> test1.txt
    27  cat test1.txt 
    28  sed 's/line1/line2/g' test1.txt
@@ -35,18 +34,13 @@
    34  cp test1.txt test2.txt
    35  echo 'test line 2 for file1' >> test1.txt 
    36  cat test1.txt 
-   37  diff test1.txt test2.txt 
-   38  cat test1.txt 
+   37  diff test1.txt test2.txt  
    39  diff test1.txt test2.txt 
    40  cat test1.txt test2.txt 
-   41  diff --help
    42  diff -c test1.txt test2.txt 
    43  diff --help
-   44  uname 
    45  uname -n
    46  uname -a
-   47  uanme --help
    48  uname --help
-   49  hitory
    50  history
    

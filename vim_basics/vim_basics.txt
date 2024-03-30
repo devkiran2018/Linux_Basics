@@ -4,3 +4,53 @@ vi /home/test-user/testfile
 #if the file exists, vi will open it in command mode, 
 ->if not, it will create it and open it in command mode.
 
+
+
+---- how to get line number in vi file---
+press esc to be in the command mode, 
+Press : (the colon). The cursor should reappear at the lower left corner of the screen next to a : prompt.
+Enter the following command: set number
+----how to go to particular line in vi---
+press esc to be in command mode and enter ->:and line number ex :74, takes to line 74.
+If you're already in vi, you can use the goto command. To do this, press Esc , type the line number, and then press Shift-g . If you press Esc and then Shift-g without specifying a line number, it will take you to the last line in the file.
+
+---- while pasting from the documentation to vi text editor if you see extra spaces in the editor , then use :set noai, and the paste your code, once done , you can use set: ai to get the auto indent back.
+
+
+
+#if you don't configure the .bashrc, then when you close the terminal the aliases that you have written would not persist, so you won't be able to use them when you open a new terminal.
+
+-> so to overcome above drawback use .bashrc for setting below values.
+---.bashrc-- write these in bashrc --so that all these are available in all terminals.
+vi .bashrc  # open file, press PgDn button on key board and enter 'o' to get onto new line and shift to insert mode.
+alias kc='kubectl config get-contexts'
+alias ckd='cd /etc/kubernetes/manifestes/'
+export do='--dry-run=client -o yaml'
+
+
+# conifure .vimrc file to set 
+set ai
+set et
+set ts=2
+set sw=2
+
+
+
+Use the history command to reuse already entered commands or use even faster history search through Ctrl r .
+
+
+Vim -> Be great with vim.
+toggle vim line numbers
+
+When in vim you can press Esc and type :set number or :set nonumber followed by Enter to toggle line numbers. This can be useful when finding syntax errors based on line - but can be bad when wanting to mark&copy by mouse. You can also just jump to a line number with Esc :22 + Enter.
+
+copy&paste
+Get used to copy/paste/cut with vim:
+
+Mark lines: Esc+V (then arrow keys)-> (shift+v)
+Copy marked lines: y -> yank
+Cut marked lines: d  -> delete
+Past lines: p or P   -> paste
+Indent multiple lines
+To indent multiple lines press Esc and type :set shiftwidth=2. First mark multiple lines using Shift v and the up/down keys. Then to indent the marked lines press > or <. You can then press . to repeat the action.
+
